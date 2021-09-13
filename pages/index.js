@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>PUTITO</h1>
-      <button> <Link href='putito'> Play </Link></button>
+      <button> <Link href={{pathname: '/putito'}}> Play </Link></button>
     </div>
   )
 }
