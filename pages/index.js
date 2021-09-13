@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.homeContainer}>
       <h1>PUTITO</h1>
       <button> <Link href={{pathname: '/putito'}}> Play </Link></button>
     </div>
