@@ -5,9 +5,27 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className={styles.homeContainer}>
-      <h1>PUTITO</h1>
-      <button> <Link href={{pathname: '/putito'}}> Play </Link></button>
-    </div>
+    <>
+      <div className={styles.homeImageContainer}>
+            <div className={styles.image} alt="" />
+            <div className={styles.linkContainer}>
+                <Link href={{pathname: '/game'}} > 
+                  Play!
+                </Link>
+            </div>
+        </div>
+
+      <style jsx>{`
+          button{
+            width: 200px;
+            height: 60px;
+            font-size: 2rem; 
+
+            position: absolute;
+          }
+        `}
+      </style>
+
+    </>
   )
 }

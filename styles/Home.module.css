@@ -1,8 +1,68 @@
-.homeContainer {
-  background-image: url("../public/home-comprimida.png");
+.homeImageContainer {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeImageContainer .image {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../public/images/home-comprimida.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.linkContainer {
+  position: absolute;
+  bottom: 17vh;
+  width: 350px;
+  height: 70px;
+
+  border-radius: 20px;
+  box-shadow: 3px 3px rgb(0, 0, 0);
+  background-color: rgba(2, 193, 216);
+}
+.homeImageContainer a {
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #00483f;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .homeImageContainer .image {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../public/images/home-mobile2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+  }
+  .linkContainer {
+    background-color: #fbf77b;
+    border-radius: 20px;
+    color: black;
+    width: 70vw;
+    bottom: 100px;
+  }
+  .homeImageContainer a {
+    color: black;
+  }
 }
