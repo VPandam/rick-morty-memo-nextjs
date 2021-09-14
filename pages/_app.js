@@ -1,7 +1,20 @@
 import '../styles/globals.css'
+import { ChronoProvider} from './Context/ChronoContext'
+import { GameInfoProvider } from './Context/GameInfoContext';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+export default function MyApp ({Component, pageProps}) {
+
+    return (
+      <ChronoProvider>
+      <GameInfoProvider>
+        <Component {...pageProps} />
+      </GameInfoProvider>
+      </ChronoProvider>
+    );
+  
 }
 
-export default MyApp
+
+
+
