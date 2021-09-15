@@ -12,7 +12,6 @@ export function ChronoProvider (props){
 
     
     const chrono = () => {
-        console.log(stop)
         if (stop === false) {
             seconds++
 
@@ -49,7 +48,6 @@ export function ChronoProvider (props){
     }
     
     const startChrono = () => {
-        console.log(stop)
         if (stop === true) {
 			stop = false
 			chrono()

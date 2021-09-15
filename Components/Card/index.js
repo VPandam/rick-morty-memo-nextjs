@@ -1,16 +1,18 @@
 import styles from './Card.module.css'
 
  export default function Card (props){
+    
     const divStyle = {
         backgroundImage: 'url(' + props.photo + ')'
     };
 
     return(
+        
         <>
             <div className='Card'>
                 <div className='image'>
                     <div className='front' style={divStyle} onClick={(e) => props.handleClickOnCard}></div>
-                    <div className={`${styles.back} back`} onClick={(e) => props.handleClickOnCard(e, divStyle)}></div>
+                    <div className={`${styles.back} back`}onClick={(e) => props.handleClickOnCard(e, divStyle)}></div>
                 </div>
                 
             </div>
@@ -44,8 +46,7 @@ import styles from './Card.module.css'
                     border-radius: 10px;
                 
                     backface-visibility: hidden;
-                
-                    position: absolute;
+                                        position: absolute;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;

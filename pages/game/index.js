@@ -4,14 +4,13 @@ import React, {useState, useEffect} from 'react';
 
 
 import Card from '../../Components/Card/index.js'
-import Chrono from '../../Components/Chrono/index.js'
 import './Game.module.css'
 
 import getRandomInt from '../../Functions/getRandomInt/getRandomInt'
 import rotateCard from '../../Functions/rotateCard/rotateCard';
 
-import { useChrono } from '../Context/ChronoContext';
-import { useGameInfo } from '../Context/GameInfoContext';
+import { useChrono } from '../../Components/Context/ChronoContext';
+import { useGameInfo } from '../../Components/Context/GameInfoContext';
 import classNames from "classnames";
 
 
@@ -74,7 +73,6 @@ export default function Game (){
     const newGame = () => {
         let a = document.getElementsByClassName("image");
         let cards = [...a];
-        console.log(a);
         
         if(!pause){
 
@@ -102,7 +100,6 @@ export default function Game (){
         if(!pause){
             startChrono()
             if(e.target.classList.contains('back')){
-                console.log("putito")
                 if (cardClickOneURL === undefined){
                     cardClickOne = e.target.offsetParent;
                     rotateCard(cardClickOne);
