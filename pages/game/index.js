@@ -15,7 +15,7 @@ import classNames from "classnames";
 
 
 
-export default function Game (){
+export default function Game ({ results }){
 
     const { numberOfCards } = useGameInfo();
     const { restartTime, startChrono, PauseTime } = useChrono();
@@ -32,8 +32,7 @@ export default function Game (){
 
 
     useEffect(() => {
-        console.log('useEffect')
-        fetchData()
+        setData(results);
     }, [])
 
     useEffect(() => {
@@ -192,8 +191,17 @@ export default function Game (){
             </React.Fragment>
         )
     }
+ 
+}
+export async function getStaticProps (){
+    let page = getRandomInt(0,33);
+    let url = `https://rickandmortyapi.com/api/character?page=${page}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const results = data.results;
+
     
     
-       
-    
+    return {props: {results}}
+
 }
