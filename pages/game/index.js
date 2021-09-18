@@ -27,13 +27,9 @@ export default function Game ({ results }){
         cards.push(<Card/>)  
     }
 
-    const [data, setData] = useState()
+    const [data, setData] = useState(results)
     const [photos, setPhotos] = useState()
 
-
-    useEffect(() => {
-        setData(results);
-    }, [])
 
     useEffect(() => {
         if (data){
